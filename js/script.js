@@ -129,12 +129,29 @@ submitElem.addEventListener('click', function () {
         let priceFinal = priceBasic;
         if(discount) priceFinal *= (1-discount);
 
-        // ! Log Results
+        // ! Log Price
         console.log('');
         console.log('# Prezzo Biglietto:');
         console.log('Prezzo Base: €' + priceBasic.toFixed(2));
         if(discount) console.log(`Sconto applicato: ${discount * 100}%`);
         console.log('Prezzo Finale: €' + priceFinal.toFixed(2));
+
+        // *** CALCULATE TICKET DATA ***//
+        // Ticket Offer
+        let ticketOffer = 'Biglietto Standard';
+        if(discount === underageDiscount) ticketOffer = 'Biglietto Under 18';
+        else if(discount === overageDiscount) ticketOffer = 'Biglietto Over 65';
+
+        // Ticket Vagon
+        const minVagon = 1;
+        const maxVagon = 8;
+        const ticketVagon = Math.floor(random * (maxVagon + 1 - minVagon)) + minVagon;
+
+        // Ticket Code
+        const minCode = 90000;
+        const maxCode = 99999;
+        const ticketCode = Math.floor(random * (maxCode + 1 - minCode)) + minCode;
+
     }
 
     console.log('----------- SUBMIT DONE -----------');
