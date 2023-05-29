@@ -36,6 +36,15 @@ console.log('JS OK!');// Check if JS is linked to the page
 -------------------------------------------*/
 console.log('----------- INIT -----------');
 
+// *** TICKET DATA ***//
+const pricePerKm = 0.21;// [€]
+
+const underageLimit = 18;// [years]
+const underageDiscount = 0.20;// [percentage unit]
+const overageLimit = 65;// [years]
+const overageDiscount = 0.40;// [percentage unit]
+
+
 // *** DOM ELEMENTS ***//
 const nameInput = document.getElementById('name');
 const tripLengthInput = document.getElementById('trip-length');
