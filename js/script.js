@@ -189,7 +189,10 @@ resetElem.addEventListener('click', function () {
     ageElem.selectedIndex = 0;
 
     // Hide ticket
-    ticketContainerElem.classList.add('d-none')
+    ticketContainerElem.classList.add('d-none');
+
+    // ! Log
+    console.log('Campi resettati!');
 
     console.log('----------- RESET DONE -----------');
 });
