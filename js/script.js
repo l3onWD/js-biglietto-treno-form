@@ -36,8 +36,16 @@ console.log('JS OK!');// Check if JS is linked to the page
 -------------------------------------------*/
 console.log('----------- INIT -----------');
 
+// *** DOM ELEMENTS ***//
+const nameInput = document.getElementById('name');
+const tripLengthInput = document.getElementById('trip-length');
+const ageInput = document.getElementById('age');
 
-
+//! Log Eleemnts
+console.log('# Dom Elements');
+console.log('Name Input: ' + nameInput);
+console.log('Trip Length Input: ' + tripLengthInput);
+console.log('Age Input: ' + ageInput);
 
 /* -----------------------------------------
 * LOGIC
