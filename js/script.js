@@ -105,8 +105,16 @@ submitElem.addEventListener('click', function () {
     
     // *** CREATE TICKET ***//
     if(!isValid) {
-        console.log("# ERRORE: i dati inseriti non sono corretti!")
+        // *** SHOW ERROR MESSAGE ***//
+        errorMessageElem.innerText = 'i dati inseriti non sono corretti!';
+
+        //! Log Error
+        console.log("# ERRORE: i dati inseriti non sono corretti!");
+
     } else {
+
+        // *** CLEAR ERROR MESSAGE ***//
+        errorMessageElem.innerText = '';
 
         // *** CALCULATE PRICE ***//
         // Basic price
