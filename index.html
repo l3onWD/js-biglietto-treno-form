@@ -9,7 +9,7 @@
 
         <!-- * RESOURCES * -->
         <!-- Bootstrap 5 -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <!-- Style -->
@@ -20,26 +20,49 @@
         
     </head>
     <body>
-        <!-- Name Field -->
-        <div>
-            <label for="name">Nome e Cognome</label>
-            <input type="text" id="name" min="3" value="Vincenzo Mazzarella">
+
+        <div class="container-fluid">
+
+            <!-- Top Section -->
+            <div>
+
+                <!-- Section Title -->
+                <h3 class="mb-4">Calcola il prezzo del biglietto</h3>
+
+                <!-- Data Form -->
+                <div>
+                    <!-- Name Field -->
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Nome e Cognome</label>
+                        <input id="name" class="form-control" type="text" min="3" value="Vincenzo Mazzarella">
+                    </div>
+
+                    <!-- Trip Length Field -->
+                    <div class="mb-3">
+                        <label class="form-label" for="trip-length">Lunghezza Viaggio</label>
+                        <input id="trip-length" class="form-control" type="number" min="1" value="10">
+                    </div>
+
+                    <!-- Age Field -->
+                    <div class="mb-3">
+                        <label class="form-label" for="age">Età</label>
+                        <input id="age" class="form-control" type="number" min="1" value="20">
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="mb-3">
+                        <button id="submit" class="btn btn-primary">Genera Biglietto</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Section -->
+            <div>
+                <!-- Ticket Data -->
+            </div>
+            
         </div>
-
-        <!-- Trip Length Field -->
-        <div>
-            <label for="trip-length">Lunghezza Viaggio</label>
-            <input type="number" id="trip-length" min="1" value="10">
-        </div>
-
-        <!-- Age Field -->
-        <div>
-            <label for="age">Età</label>
-            <input type="number" id="age" min="1" value="20">
-        </div>
-
-
-        <button id="submit">Genera Biglietto</button>
 
         <!-- Script -->
         <script src="js/script.js"></script>
