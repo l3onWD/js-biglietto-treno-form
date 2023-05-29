@@ -20,12 +20,12 @@ const underageDiscount = 0.20;// [percentage unit]
 const overageDiscount = 0.40;// [percentage unit]
 
 // Vagon number range
-const minVagon = 1;
-const maxVagon = 8;
+const minVagonNumber = 1;// [Int]
+const maxVagonNumber = 8;// [Int]
 
 // Code number range
-const minCode = 90000;
-const maxCode = 99999;
+const minCodeNumber = 90000;// [Int]
+const maxCodeNumber = 99999;// [Int]
 
 
 // *** DOM INPUT ELEMENTS ***//
@@ -149,10 +149,10 @@ submitElem.addEventListener('click', function () {
         else if(discount === overageDiscount) ticketOffer = 'Biglietto Over 65';
 
         // Ticket Vagon
-        const ticketVagon = Math.floor(Math.random() * (maxVagon + 1 - minVagon)) + minVagon;
+        const ticketVagon = Math.floor(Math.random() * (maxVagonNumber + 1 - minVagonNumber)) + minVagonNumber;
 
         // Ticket Code
-        const ticketCode = Math.floor(Math.random() * (maxCode + 1 - minCode)) + minCode;
+        const ticketCode = Math.floor(Math.random() * (maxCodeNumber + 1 - minCodeNumber)) + minCodeNumber;
 
 
         // *** SHOW TICKET ***//
