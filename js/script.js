@@ -36,6 +36,7 @@ console.log('JS OK!');// Check if JS is linked to the page
 -------------------------------------------*/
 console.log('----------- INIT -----------');
 
+
 // *** TICKET DATA ***//
 const pricePerKm = 0.21;// [€]
 
@@ -52,7 +53,9 @@ const ageElem = document.getElementById('age');
 const submitElem = document.getElementById('submit');
 const errorMessageElem = document.querySelector('.error-message');
 
+
 // *** DOM TICKET DATA ELEMENTS ***//
+const ticketContainerElem = document.getElementById('ticket-container');
 const ticketNameElem = document.getElementById('ticket-name');
 const ticketOfferElem = document.getElementById('ticket-offer');
 const ticketVagonElem = document.getElementById('ticket-vagon');
@@ -69,6 +72,7 @@ console.log('Error Message: ' + errorMessageElem);
 
 console.log('');
 console.log('# Elementi Dom del Biglietto:');
+console.log('Ticket Container: ' + ticketContainerElem);
 console.log('Ticket Name: ' + ticketNameElem);
 console.log('Ticket Offer: ' + ticketOfferElem);
 console.log('Ticket Vagon: ' + ticketVagonElem);
@@ -84,6 +88,7 @@ console.log('----------- LOGIC -----------');
 // *** SUBMIT CLICK ***//
 submitElem.addEventListener('click', function () {
 
+
     // *** USER INPUTS ***//
     const nameInput = nameElem.value.trim();
     const tripLengthInput = parseInt(tripLengthElem.value);
@@ -95,6 +100,7 @@ submitElem.addEventListener('click', function () {
     console.log('Lunghezza Viaggio: ' + tripLengthInput);
     console.log('Anni: ' + ageInput);
     
+
     // *** VALIDATION ***//
     let isValid = true;
 
@@ -105,6 +111,7 @@ submitElem.addEventListener('click', function () {
     
     // *** CREATE TICKET ***//
     if(!isValid) {
+
         // *** SHOW ERROR MESSAGE ***//
         errorMessageElem.innerText = 'i dati inseriti non sono corretti!';
 
@@ -115,6 +122,7 @@ submitElem.addEventListener('click', function () {
 
         // *** CLEAR ERROR MESSAGE ***//
         errorMessageElem.innerText = '';
+
 
         // *** CALCULATE PRICE ***//
         // Basic price
@@ -136,6 +144,7 @@ submitElem.addEventListener('click', function () {
         if(discount) console.log(`Sconto applicato: ${discount * 100}%`);
         console.log('Prezzo Finale: €' + priceFinal.toFixed(2));
 
+
         // *** CALCULATE TICKET DATA ***//
         // Ticket Offer
         let ticketOffer = 'Biglietto Standard';
@@ -145,12 +154,24 @@ submitElem.addEventListener('click', function () {
         // Ticket Vagon
         const minVagon = 1;
         const maxVagon = 8;
-        const ticketVagon = Math.floor(random * (maxVagon + 1 - minVagon)) + minVagon;
+        const ticketVagon = Math.floor(Math.random() * (maxVagon + 1 - minVagon)) + minVagon;
 
         // Ticket Code
         const minCode = 90000;
         const maxCode = 99999;
-        const ticketCode = Math.floor(random * (maxCode + 1 - minCode)) + minCode;
+        const ticketCode = Math.floor(Math.random() * (maxCode + 1 - minCode)) + minCode;
+
+
+        // *** SHOW TICKET ***//
+        // Update data
+        ticketNameElem.innerText = nameInput;
+        ticketOfferElem.innerText = ticketOffer;
+        ticketVagonElem.innerText = ticketVagon;
+        ticketCodeElem.innerText = ticketCode;
+        ticketPriceElem.innerText = '€' + priceFinal.toFixed(2);
+
+        // Show ticket
+        ticketContainerElem.classList.remove('d-none')
 
     }
 
