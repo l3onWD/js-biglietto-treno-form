@@ -25,7 +25,7 @@ const tripLengthElem = document.getElementById('trip-length');
 const ageElem = document.getElementById('age');
 const submitElem = document.getElementById('submit');
 const resetElem = document.getElementById('reset');
-const errorMessageElem = document.querySelector('.error-message');
+const errorMessageElem = document.querySelector('#error-message');
 
 
 // *** DOM TICKET DATA ELEMENTS ***//
@@ -88,15 +88,17 @@ submitElem.addEventListener('click', function () {
     if(!isValid) {
 
         // *** SHOW ERROR MESSAGE ***//
-        errorMessageElem.innerText = 'i dati inseriti non sono corretti!';
+        errorMessageElem.innerText = 'I dati inseriti non sono corretti!';
+        errorMessageElem.classList.remove('d-none');
 
         //! Log Error
         console.log("# ERRORE: i dati inseriti non sono corretti!");
 
     } else {
 
-        // *** CLEAR ERROR MESSAGE ***//
+        // *** HIDE ERROR MESSAGE ***//
         errorMessageElem.innerText = '';
+        errorMessageElem.classList.add('d-none');
 
 
         // *** CALCULATE PRICE ***//
@@ -146,7 +148,7 @@ submitElem.addEventListener('click', function () {
         ticketPriceElem.innerText = '€' + priceFinal.toFixed(2);
 
         // Show ticket
-        ticketContainerElem.classList.remove('d-none')
+        ticketContainerElem.classList.remove('d-none');
 
     }
 
