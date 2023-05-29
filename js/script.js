@@ -19,7 +19,7 @@ const underageDiscount = 0.20;// [percentage unit]
 const overageDiscount = 0.40;// [percentage unit]
 
 
-// *** DOM INPUTS ELEMENTS ***//
+// *** DOM INPUT ELEMENTS ***//
 const nameElem = document.getElementById('name');
 const tripLengthElem = document.getElementById('trip-length');
 const ageElem = document.getElementById('age');
