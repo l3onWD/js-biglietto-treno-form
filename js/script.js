@@ -81,6 +81,10 @@ submitElem.addEventListener('click', function () {
     // *** VALIDATION ***//
     let isValid = true;
 
+    if(nameInput.length < 3 || isNaN(tripLengthInput) || isNaN(ageInput) || tripLengthInput < 1 || ageInput < 1) {
+        isValid = false;
+    }
+
     
     // *** CREATE TICKET ***//
     if(!isValid) {
@@ -108,5 +112,5 @@ submitElem.addEventListener('click', function () {
         console.log('Prezzo Finale: €' + priceFinal.toFixed(2));
     }
 
-    console.log('----------- DONE -----------');
+    console.log('----------- SUBMIT DONE -----------');
 });
