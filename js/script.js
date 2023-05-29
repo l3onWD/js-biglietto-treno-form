@@ -45,18 +45,33 @@ const overageLimit = 65;// [years]
 const overageDiscount = 0.40;// [percentage unit]
 
 
-// *** DOM ELEMENTS ***//
+// *** DOM INPUTS ELEMENTS ***//
 const nameElem = document.getElementById('name');
 const tripLengthElem = document.getElementById('trip-length');
 const ageElem = document.getElementById('age');
 const submitElem = document.getElementById('submit');
 
+// *** DOM TICKET DATA ELEMENTS ***//
+const ticketNameElem = document.getElementById('ticket-name');
+const ticketOfferElem = document.getElementById('ticket-offer');
+const ticketVagonElem = document.getElementById('ticket-vagon');
+const ticketCodeElem = document.getElementById('ticket-code');
+const ticketPriceElem = document.getElementById('ticket-price');
+
 //! Log Elements
-console.log('# Elementi Dom:');
+console.log('# Elementi Dom di Input:');
 console.log('Name Input: ' + nameElem);
 console.log('Trip Length Input: ' + tripLengthElem);
 console.log('Age Input: ' + ageElem);
 console.log('Submit Button: ' + submitElem);
+
+console.log('');
+console.log('# Elementi Dom del Biglietto:');
+console.log('Ticket Name: ' + ticketNameElem);
+console.log('Ticket Offer: ' + ticketOfferElem);
+console.log('Ticket Vagon: ' + ticketVagonElem);
+console.log('Ticket Code: ' + ticketCodeElem);
+console.log('Ticket Price: ' + ticketPriceElem);
 
 /* -----------------------------------------
 * LOGIC
