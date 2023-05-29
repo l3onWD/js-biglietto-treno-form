@@ -81,8 +81,8 @@ submitElem.addEventListener('click', function () {
     //! Log Inputs
     console.log('# Dati Inseriti:');
     console.log('Nome: ' + nameInput);
-    console.log('Lunghezza Viaggio: ' + tripLengthInput);
-    console.log('Anni: ' + ageInput);
+    console.log('Lunghezza Viaggio: ' + tripLengthInput + 'KM');
+    console.log('Fascia d\'età: ' + ageInput);
     
 
     // *** VALIDATION ***//
