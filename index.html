@@ -19,18 +19,18 @@
         <title>Calcolo biglietto del treno</title>
         
     </head>
-    <body>
+    <body class="bg-danger">
 
         <div class="container-fluid">
 
             <!-- Data Container -->
-            <div class="mb-5">
+            <div class="my-5">
 
                 <!-- Section Title -->
-                <h3 class="mb-4">Calcola il prezzo del biglietto</h3>
+                <h3 class="text-center text-white mb-4">CALCOLA IL PREZZO DEL BIGLIETTO</h3>
 
                 <!-- Data Form -->
-                <div>
+                <div class="bg-white rounded-5 p-3">
                     <!-- Error Message -->
                     <div class="error-message text-danger"></div>
 
@@ -70,47 +70,36 @@
             <div id="ticket-container" class="d-none">
                 
                 <!-- Section Title -->
-                <h3 class="mb-4">Il tuo biglietto</h3>
+                <h3 class="text-center text-white mb-4">IL TUO BIGLIETTO</h3>
 
                 <!-- Ticket Details -->
-                <div>
+                <div class="bg-white rounded-5 p-3 ">
 
                     <!-- Title -->
-                    <h4>Dettaglio Passeggero</h5>
+                    <h4>Dettaglio Passeggeri</h5>
 
-                    <!-- Data -->
-                    <div class="row">
-
-                        <!-- Passenger Name -->
-                        <div class="col-4">
-                            <h5>NOME PASSEGGERO</h5>
-                            <strong id="ticket-name"></strong>
-                        </div>
-
-                        <!-- Table -->
-                        <div class="col-8">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Offerta</th>
-                                        <th>Carrozza</th>
-                                        <th>Codice CP</th>
-                                        <th>Costo</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td id="ticket-offer"></td>
-                                        <td id="ticket-vagon"></td>
-                                        <td id="ticket-code"></td>
-                                        <td id="ticket-price"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-
+                    <!-- Table -->
+                    <table class="table table-borderless border-top border-bottom">
+                        <thead>
+                            <tr>
+                                <th class="bg-success">NOME PASSEGGERO</th>
+                                <th>Offerta</th>
+                                <th>Carrozza</th>
+                                <th>Codice CP</th>
+                                <th>Costo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="ticket-name" class="bg-success fw-bold"></td>
+                                <td id="ticket-offer"></td>
+                                <td id="ticket-vagon"></td>
+                                <td id="ticket-code"></td>
+                                <td id="ticket-price"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  
                 </div>
 
             </div>
