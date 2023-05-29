@@ -78,21 +78,32 @@ submitElem.addEventListener('click', function () {
 
     // *** VALIDATION ***//
     let isValid = true;
+    let errorMsg = '';
 
-    if(nameInput.length < 3 || isNaN(tripLengthInput) || tripLengthInput < 1) {
+    // Name input validation
+    if(nameInput.length < 3) {
         isValid = false;
+        errorMsg += 'Inserisci un nome di almeno 3 caratteri!\n';
+    }
+
+    // Age input validation
+    if(isNaN(tripLengthInput) || tripLengthInput < 1) {
+        isValid = false;
+        errorMsg += 'Inserisci un età maggiore o uguale ad 1 Anno!\n';
     }
 
     
     // *** CREATE TICKET ***//
     if(!isValid) {
 
-        // *** SHOW ERROR MESSAGE ***//
-        errorMessageElem.innerText = 'I dati inseriti non sono corretti!';
+        // *** SHOW VALIDATION ERROR ***//
+        errorMessageElem.innerText = errorMsg;
         errorMessageElem.classList.remove('d-none');
 
         //! Log Error
-        console.log("# ERRORE: i dati inseriti non sono corretti!");
+        console.log("");
+        console.log("# ERRORE:");
+        console.log(errorMsg);
 
     } else {
 
@@ -101,7 +112,7 @@ submitElem.addEventListener('click', function () {
         errorMessageElem.classList.add('d-none');
 
 
-        // *** CALCULATE PRICE ***//
+        // *** CALCULATE PRICE DATA ***//
         // Basic price
         const priceBasic = tripLengthInput * pricePerKm;
 
