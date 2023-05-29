@@ -50,6 +50,7 @@ const nameElem = document.getElementById('name');
 const tripLengthElem = document.getElementById('trip-length');
 const ageElem = document.getElementById('age');
 const submitElem = document.getElementById('submit');
+const errorMessageElem = document.querySelector('.error-message');
 
 // *** DOM TICKET DATA ELEMENTS ***//
 const ticketNameElem = document.getElementById('ticket-name');
@@ -64,6 +65,7 @@ console.log('Name Input: ' + nameElem);
 console.log('Trip Length Input: ' + tripLengthElem);
 console.log('Age Input: ' + ageElem);
 console.log('Submit Button: ' + submitElem);
+console.log('Error Message: ' + errorMessageElem);
 
 console.log('');
 console.log('# Elementi Dom del Biglietto:');
