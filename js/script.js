@@ -49,6 +49,7 @@ const nameElem = document.getElementById('name');
 const tripLengthElem = document.getElementById('trip-length');
 const ageElem = document.getElementById('age');
 const submitElem = document.getElementById('submit');
+const resetElem = document.getElementById('reset');
 const errorMessageElem = document.querySelector('.error-message');
 
 
@@ -66,6 +67,7 @@ console.log('Name Input: ' + nameElem);
 console.log('Trip Length Input: ' + tripLengthElem);
 console.log('Age Input: ' + ageElem);
 console.log('Submit Button: ' + submitElem);
+console.log('Reset Button: ' + resetElem);
 console.log('Error Message: ' + errorMessageElem);
 
 console.log('');
@@ -174,4 +176,20 @@ submitElem.addEventListener('click', function () {
     }
 
     console.log('----------- SUBMIT DONE -----------');
+});
+
+
+// *** RESET CLICK ***//
+resetElem.addEventListener('click', function () {
+
+    // *** RESET PAGE DATA ***//
+    // Reset inputs
+    nameElem.value = '';
+    tripLengthElem.value = 1;
+    ageElem.selectedIndex = 0;
+
+    // Hide ticket
+    ticketContainerElem.classList.add('d-none')
+
+    console.log('----------- RESET DONE -----------');
 });
