@@ -49,12 +49,14 @@ const overageDiscount = 0.40;// [percentage unit]
 const nameInput = document.getElementById('name');
 const tripLengthInput = document.getElementById('trip-length');
 const ageInput = document.getElementById('age');
+const submitBtn = document.getElementById('submit');
 
 //! Log Eleemnts
 console.log('# Dom Elements');
 console.log('Name Input: ' + nameInput);
 console.log('Trip Length Input: ' + tripLengthInput);
 console.log('Age Input: ' + ageInput);
+console.log('Submit Button: ' + submitBtn);
 
 /* -----------------------------------------
 * LOGIC
@@ -62,6 +64,10 @@ console.log('Age Input: ' + ageInput);
 console.log('----------- LOGIC -----------');
 
 
+// *** SUBMIT CLICK ***//
+submitBtn.addEventListener('click', function () {
+    
+});
 
 
 
