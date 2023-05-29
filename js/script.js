@@ -46,17 +46,17 @@ const overageDiscount = 0.40;// [percentage unit]
 
 
 // *** DOM ELEMENTS ***//
-const nameInput = document.getElementById('name');
-const tripLengthInput = document.getElementById('trip-length');
-const ageInput = document.getElementById('age');
-const submitBtn = document.getElementById('submit');
+const nameElem = document.getElementById('name');
+const tripLengthElem = document.getElementById('trip-length');
+const ageElem = document.getElementById('age');
+const submitElem = document.getElementById('submit');
 
-//! Log Eleemnts
-console.log('# Dom Elements');
-console.log('Name Input: ' + nameInput);
-console.log('Trip Length Input: ' + tripLengthInput);
-console.log('Age Input: ' + ageInput);
-console.log('Submit Button: ' + submitBtn);
+//! Log Elements
+console.log('# Elementi Dom:');
+console.log('Name Input: ' + nameElem);
+console.log('Trip Length Input: ' + tripLengthElem);
+console.log('Age Input: ' + ageElem);
+console.log('Submit Button: ' + submitElem);
 
 /* -----------------------------------------
 * LOGIC
@@ -65,8 +65,20 @@ console.log('----------- LOGIC -----------');
 
 
 // *** SUBMIT CLICK ***//
-submitBtn.addEventListener('click', function () {
+submitElem.addEventListener('click', function () {
+
+    // *** USER INPUTS ***//
+    const nameInput = nameElem.value.trim();
+    const tripLengthInput = parseInt(tripLengthElem.value);
+    const ageInput = parseInt(ageElem.value);
+
+    //! Log Inputs
+    console.log('# Dati Inseriti:');
+    console.log('Nome: ' + nameInput);
+    console.log('Lunghezza Viaggio: ' + tripLengthInput);
+    console.log('Anni: ' + ageInput);
     
+
 });
 
 
