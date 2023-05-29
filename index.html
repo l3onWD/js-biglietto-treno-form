@@ -20,10 +20,25 @@
         
     </head>
     <body>
+        <!-- Name Field -->
+        <div>
+            <label for="name">Nome e Cognome</label>
+            <input type="text" id="name" min="3" value="Vincenzo Mazzarella">
+        </div>
 
-        <input type="text" id="name" min="3" value="Vincenzo Mazzarella">
-        <input type="number" id="trip-length" min="1" value="10">
-        <input type="number" id="age" min="1" value="20">
+        <!-- Trip Length Field -->
+        <div>
+            <label for="trip-length">Lunghezza Viaggio</label>
+            <input type="number" id="trip-length" min="1" value="10">
+        </div>
+
+        <!-- Age Field -->
+        <div>
+            <label for="age">Età</label>
+            <input type="number" id="age" min="1" value="20">
+        </div>
+
+
         <button id="submit">Genera Biglietto</button>
 
         <!-- Script -->
