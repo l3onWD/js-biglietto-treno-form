@@ -78,9 +78,35 @@ submitElem.addEventListener('click', function () {
     console.log('Lunghezza Viaggio: ' + tripLengthInput);
     console.log('Anni: ' + ageInput);
     
+    // *** VALIDATION ***//
+    let isValid = true;
 
+    
+    // *** CREATE TICKET ***//
+    if(!isValid) {
+        console.log("# ERRORE: i dati inseriti non sono corretti!")
+    } else {
+
+        // *** CALCULATE PRICE ***//
+        // Basic price
+        const priceBasic = tripLengthInput * pricePerKm;
+
+        // Calculate discount
+        let discount = null;
+        if(ageInput < underageLimit) discount = underageDiscount;
+        else if(ageInput >= overageLimit) discount = overageDiscount;
+
+        // Calculate final price with discount
+        let priceFinal = priceBasic;
+        if(discount) priceFinal *= (1-discount);
+
+        // ! Log Results
+        console.log('');
+        console.log('# Prezzo Biglietto:');
+        console.log('Prezzo Base: €' + priceBasic.toFixed(2));
+        if(discount) console.log(`Sconto applicato: ${discount * 100}%`);
+        console.log('Prezzo Finale: €' + priceFinal.toFixed(2));
+    }
+
+    console.log('----------- DONE -----------');
 });
-
-
-
-console.log('----------- DONE -----------');
