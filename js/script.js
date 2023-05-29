@@ -40,9 +40,7 @@ console.log('----------- INIT -----------');
 // *** TICKET DATA ***//
 const pricePerKm = 0.21;// [€]
 
-const underageLimit = 18;// [years]
 const underageDiscount = 0.20;// [percentage unit]
-const overageLimit = 65;// [years]
 const overageDiscount = 0.40;// [percentage unit]
 
 
@@ -92,7 +90,7 @@ submitElem.addEventListener('click', function () {
     // *** USER INPUTS ***//
     const nameInput = nameElem.value.trim();
     const tripLengthInput = parseInt(tripLengthElem.value);
-    const ageInput = parseInt(ageElem.value);
+    const ageInput = ageElem.value;
 
     //! Log Inputs
     console.log('# Dati Inseriti:');
@@ -104,7 +102,7 @@ submitElem.addEventListener('click', function () {
     // *** VALIDATION ***//
     let isValid = true;
 
-    if(nameInput.length < 3 || isNaN(tripLengthInput) || isNaN(ageInput) || tripLengthInput < 1 || ageInput < 1) {
+    if(nameInput.length < 3 || isNaN(tripLengthInput) || tripLengthInput < 1) {
         isValid = false;
     }
 
@@ -130,8 +128,8 @@ submitElem.addEventListener('click', function () {
 
         // Calculate discount
         let discount = null;
-        if(ageInput < underageLimit) discount = underageDiscount;
-        else if(ageInput >= overageLimit) discount = overageDiscount;
+        if(ageInput === 'underage') discount = underageDiscount;
+        else if(ageInput === 'overage') discount = overageDiscount;
 
         // Calculate final price with discount
         let priceFinal = priceBasic;
